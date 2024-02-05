@@ -13,7 +13,7 @@ import (
 var ctx = context.Background()
 
 func SetupDatabase() (*gorm.DB, error) {
-	db, err := gorm.Open(postgres.Open("postgres://postgres:15522345@localhost:5432/postgres"), &gorm.Config{})
+	db, err := gorm.Open(postgres.Open("postgres://postgres:your_password@localhost:5432/postgres"), &gorm.Config{})
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to database: %v", err)
 	}
